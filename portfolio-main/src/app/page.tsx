@@ -111,7 +111,7 @@ export default function Home() {
         <nav className="fixed top-0 w-full backdrop-blur-md bg-black/30 border-b border-indigo-500/20 z-50">
           <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div className="text-2xl font-bold bg-gradient-to-r from-indigo-300 via-violet-300 to-pink-300 bg-clip-text text-transparent animate-pulse">
-              Anjali Jaikalyani
+              Portfolio
             </div>
             <div className="flex gap-8 hidden md:flex">
               {['home', 'work', 'skills', 'contact'].map((item) => (
@@ -188,17 +188,22 @@ export default function Home() {
             </div>
 
             {/* Right - Profile Image */}
-            <div className="relative h-96 md:h-full flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/30 to-pink-500/30 rounded-2xl blur-xl"></div>
-              <div className="relative w-72 h-80 rounded-2xl overflow-hidden border-2 border-indigo-500/50 shadow-2xl shadow-indigo-500/30">
+            <div className="relative flex flex-col items-center justify-start pt-0 -mt-[500px]">
+              <div className="relative w-64 h-72 rounded-2xl overflow-hidden border-2 border-indigo-500/50 shadow-2xl shadow-indigo-500/30 mb-6">
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/30 to-pink-500/30 rounded-2xl blur-xl"></div>
                 <Image
                   src="/profile.jpg"
                   alt="Your Profile"
-                  width={288}
-                  height={320}
-                  className="object-cover w-full h-full"
+                  width={320}
+                  height={384}
+                  className="object-cover w-full h-full relative z-10 scale-125 object-center translate-y-8"
                   priority
                 />
+              </div>
+              <div className="mt-6">
+                <h3 className="text-2xl font-bold text-center bg-gradient-to-r from-indigo-300 via-violet-300 to-pink-300 bg-clip-text text-transparent" style={{textShadow: '0 0 15px rgba(129, 93, 255, 0.5)'}}>
+                  Anjali Jaikalyani
+                </h3>
               </div>
             </div>
           </div>
