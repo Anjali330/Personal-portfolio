@@ -27,32 +27,22 @@ export default function Home() {
 
   const projects = [
     {
-      title: 'AI Content Generator',
-      description: 'Revolutionary AI-powered platform that generates high-quality content in seconds.',
-      tech: ['React', 'OpenAI API', 'TypeScript', 'Next.js'],
-      image: '🤖',
-      color: 'from-purple-500 to-pink-500',
+      title: 'Intern Track',
+      description:
+        'Intern Track — an internship tracking platform to manage applications, roles, and progress. Live demo deployed on Vercel.',
+      tech: ['Next.js', 'Vercel', 'Tailwind CSS', 'Firebase'],
+      image: '🧭',
+      color: 'from-indigo-500 to-pink-500',
+      url: 'https://intern-track-lac.vercel.app/',
     },
     {
-      title: 'Real-time Collaboration Tool',
-      description: 'Seamless real-time editing platform for teams worldwide with instant sync.',
-      tech: ['WebSocket', 'React', 'Node.js', 'MongoDB'],
-      image: '🚀',
-      color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      title: 'Mobile Payment App',
-      description: 'Secure and intuitive payment solution with advanced encryption and analytics.',
-      tech: ['React Native', 'Firebase', 'Stripe', 'Redux'],
-      image: '💳',
+      title: 'Book Recommender System',
+      description:
+        'A machine-learning powered book recommendation system using collaborative and content-based filtering to suggest books tailored to user preferences.',
+      tech: ['Python', 'scikit-learn', 'TensorFlow', 'Flask', 'PostgreSQL'],
+      image: '📚',
       color: 'from-green-500 to-emerald-500',
-    },
-    {
-      title: 'ML Predictive Analytics',
-      description: 'Machine learning platform for predictive analytics and data visualization.',
-      tech: ['Python', 'TensorFlow', 'FastAPI', 'PostgreSQL'],
-      image: '📊',
-      color: 'from-orange-500 to-red-500',
+      url: 'https://book-recommendor-system-three.vercel.app/',
     },
   ];
 
@@ -248,7 +238,9 @@ export default function Home() {
                     </div>
 
                     <a
-                      href="#"
+                      href={project.url ?? '#'}
+                      target={project.url ? '_blank' : undefined}
+                      rel={project.url ? 'noopener noreferrer' : undefined}
                       className="inline-block px-6 py-2 bg-gradient-to-r from-indigo-500/50 to-pink-500/50 rounded-lg hover:from-indigo-500 hover:to-pink-500 transition-all transform group-hover:scale-110"
                     >
                       View Project →
@@ -308,19 +300,23 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
               <a
-                href="mailto:your@email.com"
+                href="mailto:jaikalyaniak@rknec.edu"
                 className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-lg font-semibold hover:shadow-2xl hover:shadow-indigo-500/50 transition-all transform hover:scale-105"
               >
                 ✉️ Email Me
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/anjali-jaikalyani-2a9b98321"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 border-2 border-indigo-500/50 rounded-lg font-semibold hover:border-indigo-500 hover:bg-indigo-500/10 transition-all transform hover:scale-105"
               >
                 💼 LinkedIn
               </a>
               <a
-                href="#"
+                href="https://github.com/Anjali330"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 border-2 border-indigo-500/50 rounded-lg font-semibold hover:border-indigo-500 hover:bg-indigo-500/10 transition-all transform hover:scale-105"
               >
                 🐙 GitHub
